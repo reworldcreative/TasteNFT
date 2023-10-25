@@ -1,0 +1,17 @@
+@import "@/styles/variables.scss";
+@import "rfs/scss";
+
+.bid-component {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  &__image {
+    border-radius: 50%;
+    display: flex;
+  }
+
+  &__counter {
+    margin: 0px;
+    @include Font(16px, 600);
+  }
+}

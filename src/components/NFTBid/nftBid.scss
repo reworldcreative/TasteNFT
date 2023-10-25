@@ -1,0 +1,98 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+.nftBid {
+  background-color: $second-color;
+  border-radius: 16px;
+  box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  margin: 0px auto;
+  width: fit-content;
+  display: flex;
+  margin: -48px auto 0px;
+  z-index: 10;
+  position: relative;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    display: grid;
+    gap: 10px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:first-child {
+      padding-right: 16px;
+      padding-left: 0px;
+    }
+
+    &:last-child {
+      padding-left: 20px;
+      padding-right: 0px;
+    }
+
+    .section-text {
+      font-size: 16px;
+      font-weight: 600;
+
+      &_accent {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    .price {
+      font-size: 16px;
+    }
+
+    .button {
+      padding: 12px 32px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
+.nftDivider {
+  width: 3px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 600px) {
+  .nftBid {
+    gap: 20px;
+    justify-content: space-evenly;
+
+    &__item {
+      padding: 0px;
+      &:first-child,
+      &:last-child {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nftBid {
+    gap: 10px;
+    text-align: center;
+
+    &__item {
+      div {
+        justify-content: center;
+      }
+    }
+    .nftDivider {
+      display: none;
+    }
+  }
+}
+
+.bid-component {
+  display: flex;
+  gap: 4px;
+}

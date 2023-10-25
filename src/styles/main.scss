@@ -1,0 +1,50 @@
+@import "fonts";
+@import "normalize";
+// @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap");
+@import "variables";
+@import "rfs/scss";
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// font-family: 'Raleway', sans-serif;
+
+body {
+  background-color: $base-color;
+  font-family: $main-font;
+  font-style: normal;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-title {
+  margin: 0px;
+  @include Font(32px, 700);
+}
+
+.section-text {
+  margin: 0px;
+  @include Font(14px, 500);
+
+  &_accent {
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.empty-message {
+  margin: 0px;
+  text-align: center;
+  width: -webkit-fill-available;
+  @include Font(18px, 700);
+}
+
+.nft-List {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}

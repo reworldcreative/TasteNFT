@@ -1,0 +1,55 @@
+.activity {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #333940;
+    padding: 12px 16px;
+
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .avatar {
+      border-radius: 8px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    .button {
+      padding: 6px;
+    }
+
+    .bid-component {
+      gap: 5px;
+    }
+  }
+
+  &__caption {
+    font-size: 20px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 268px;
+  }
+
+  &__text {
+    display: grid;
+    gap: 4px;
+  }
+
+  &__data {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,53 @@
+@import "@/styles/variables.scss";
+@import "rfs/scss";
+.Creator-card {
+  border: 1px solid #333940;
+  padding: 24px 62px;
+  // padding: 20px 62px 22px;
+  text-align: center;
+  max-width: fit-content;
+  //   width: 245px;
+  &__image {
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.15);
+  }
+
+  &__content {
+    // margin-top: 20px;
+    // gap: 8px;
+    margin-top: 16px;
+    gap: 7px;
+    display: grid;
+
+    text-align: center;
+  }
+
+  &__name {
+    @include Font(20px, 700);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 120px;
+  }
+
+  &__link {
+    @include Font(16px, 500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background: $active-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 120px;
+  }
+
+  .section-text_accent {
+    @include Font(14px, 600);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 120px;
+  }
+}

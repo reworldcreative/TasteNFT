@@ -1,0 +1,17 @@
+@import "@/styles/variables.scss";
+@import "rfs/scss";
+
+.button {
+  @include Font(12px, 700);
+  padding: 9px 19px;
+  border: none;
+  border-radius: 12px;
+  background: $active-gradient;
+  box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+
+  cursor: pointer;
+}

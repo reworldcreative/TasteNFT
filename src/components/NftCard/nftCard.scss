@@ -1,0 +1,68 @@
+@import "@/styles/variables.scss";
+@import "rfs/scss";
+.nftCard {
+  border: 1px solid #333940;
+  // max-width: fit-content;
+  max-width: 317px;
+  position: relative;
+  box-sizing: border-box;
+
+  &__image {
+    width: -webkit-fill-available;
+    min-height: 50px;
+    height: auto;
+    display: block;
+  }
+
+  .avatarLabel {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    .avatar {
+      border-radius: 8px;
+    }
+
+    .userName,
+    .userLink {
+      width: 75px;
+    }
+  }
+
+  &__content {
+    // padding: 20px 16px 16px;
+    padding: 25px 15px 16px;
+    display: grid;
+    gap: 15px;
+  }
+
+  &__statistic {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__statistic-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .bid-component {
+      width: 33%;
+    }
+
+    .section-text_accent {
+      letter-spacing: -0.9px;
+    }
+  }
+
+  &__title {
+    @include Font(20px, 700);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__timer {
+    @include Font(16px, 600);
+    width: 33.5%;
+  }
+}

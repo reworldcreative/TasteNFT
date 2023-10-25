@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_1.jpg",
+    "avatar": "img/avatars/avatar_1.jpg",
+    "bidImage": "img/tasteNFT_logo_1.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 2,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_5.jpg",
+    "avatar": "img/avatars/avatar_2.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 3,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_6.jpg",
+    "avatar": "img/avatars/avatar_3.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 4,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_3.jpg",
+    "avatar": "img/avatars/avatar_4.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 5,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_7.jpg",
+    "avatar": "img/avatars/avatar_5.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 6,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_8.jpg",
+    "avatar": "img/avatars/avatar_6.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 7,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_9.jpg",
+    "avatar": "img/avatars/avatar_7.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 8,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_10.jpg",
+    "avatar": "img/avatars/avatar_8.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Auctions",
+    "data": "Recently added"
+  },
+  {
+    "id": 9,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_8.jpg",
+    "avatar": "img/avatars/avatar_5.jpg",
+    "bidImage": "img/tasteNFT_logo_1.jpg",
+    "type": "Sell",
+    "data": "Recently added"
+  },
+  {
+    "id": 10,
+    "title": "WFH - art name",
+    "image": "img/nft/nft_7.jpg",
+    "avatar": "img/avatars/avatar_3.jpg",
+    "bidImage": "img/tasteNFT_logo_2.jpg",
+    "type": "Sell",
+    "data": "Recently added"
+  }
+]

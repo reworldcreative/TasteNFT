@@ -1,0 +1,137 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+.main-section {
+  &__wrapper {
+    // margin: 40px 24px 24px;
+    padding: 40px 24px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    width: 97.4vw;
+  }
+
+  &__content {
+    // max-width: 516px;
+    max-width: 37.78vw;
+    position: relative;
+    top: -7px;
+  }
+
+  .section-title {
+    margin: 20px 0px 12px;
+  }
+
+  .section-text {
+    line-height: 128.5%;
+  }
+
+  &__bottom {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button {
+      font-size: 14px;
+      padding: 12px 32px;
+    }
+  }
+
+  &__sold {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    .section-text_accent {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+}
+
+.nft-list-section {
+  &__wrapper {
+    // padding: 80px 24px 0px;
+    padding: 75px 25px 0;
+  }
+
+  .selectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: -2px;
+  }
+
+  // .nft-List {
+  //   padding-top: 22px;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   gap: 15px 16px;
+  //   flex-wrap: wrap;
+  // }
+}
+
+.FeaturedCreators-section {
+  &__wrapper {
+    // padding: 80px 25px 0;
+    padding: 80px 0px 66px 0px;
+
+    .section-title {
+      margin-left: 25px;
+    }
+  }
+
+  &__list {
+    margin-top: 24px;
+    // padding-bottom: 25px;
+    // padding-left: 25px;
+    // padding-right: 25px;
+    padding: 0px 25px 15px;
+    display: flex;
+    gap: 15px;
+    // overflow: scroll;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 99px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-section {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-section {
+    &__bottom {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
