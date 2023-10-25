@@ -20,6 +20,7 @@ module.exports = {
   output: {
     filename: "[name][contenthash].js",
     path: path.resolve(__dirname, "docs"),
+    publicPath: "",
     // assetModuleFilename: "img/[name][ext]",
     assetModuleFilename: (pathData) => {
       return `img/${pathData.filename.split("src/img")[1].slice(1)}`;
