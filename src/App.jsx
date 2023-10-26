@@ -11,9 +11,10 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/artwork" element={<ArtworkPage />} />
+        <Route exact path="/" element={<MainPage />} />
+        <Route exact path="/artwork" element={<ArtworkPage />} />
         <Route
+          exact
           path="*"
           element={<div className="section-title">404 Page not found</div>}
         />
