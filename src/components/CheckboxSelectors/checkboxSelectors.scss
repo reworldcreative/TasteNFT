@@ -1,0 +1,25 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.checkboxSelectors {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-bottom: 2px;
+
+  &__selector {
+    @include Font(18px, 700);
+    color: rgba(255, 255, 255, 0.5);
+    background: none;
+    border: none;
+    padding: 0px;
+
+    &.active {
+      color: $main;
+      background: none;
+      border: none;
+      padding: 0px;
+    }
+  }
+}

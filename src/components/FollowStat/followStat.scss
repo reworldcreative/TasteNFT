@@ -1,0 +1,13 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.followStat {
+  display: grid;
+  gap: 2px;
+  .section-text,
+  .section-text_accent {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 128.571%;
+  }
+}

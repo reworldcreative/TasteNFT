@@ -66,3 +66,11 @@
     width: 33.5%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .nftCard {
+    &__image {
+      width: 100%;
+    }
+  }
+}

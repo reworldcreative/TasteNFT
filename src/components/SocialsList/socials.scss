@@ -1,0 +1,21 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.socialsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.socialsItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &__text {
+    color: $main;
+    margin: 0px;
+    font-size: 14px;
+  }
+}

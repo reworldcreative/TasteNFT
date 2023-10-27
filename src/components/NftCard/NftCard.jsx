@@ -14,16 +14,16 @@ export default function nftCard({
   bidImage,
 }) {
   return (
-    <Link to={"/artwork"}>
-      <article className="nftCard">
-        <AvatarLabel
-          className="avatarLabel"
-          userName="User Name"
-          userLink="@username"
-          avatarWidth="26px"
-          avatarHeight="26px"
-          avatarImage={avatar}
-        />
+    <article className="nftCard">
+      <AvatarLabel
+        className="avatarLabel"
+        userName="User Name"
+        userLink="@username"
+        avatarWidth="26px"
+        avatarHeight="26px"
+        avatarImage={avatar}
+      />
+      <Link to={"/artwork"}>
         <PictureComponent
           src={image}
           alt="nft image"
@@ -45,7 +45,7 @@ export default function nftCard({
             </div>
           </div>
         </div>
-      </article>
-    </Link>
+      </Link>
+    </article>
   );
 }

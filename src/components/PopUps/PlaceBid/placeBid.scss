@@ -1,0 +1,52 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.bidPopup {
+  &__content {
+    margin-top: 24px;
+    display: grid;
+    gap: 32px;
+  }
+
+  &__item {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__bid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    border-radius: 8px;
+    background: $base-color;
+    padding: 11px 12px 9px 16px;
+
+    input {
+      background: transparent;
+      color: $main;
+      border: none;
+      max-width: 77px;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 0px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $main;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

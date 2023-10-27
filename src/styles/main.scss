@@ -40,11 +40,3 @@ a {
   width: -webkit-fill-available;
   @include Font(18px, 700);
 }
-
-.nft-List {
-  padding-top: 22px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}

@@ -1,5 +1,6 @@
 import PictureComponent from "@/../plugins/PictureComponent";
 import "./avatarLabel.scss";
+import { Link } from "react-router-dom";
 
 export default function AvatarLabel({
   className,
@@ -10,7 +11,7 @@ export default function AvatarLabel({
   avatarImage,
 }) {
   return (
-    <div className={className}>
+    <Link to={"/creator-profile"} className={className}>
       <PictureComponent
         src={avatarImage}
         alt="men avatar"
@@ -23,6 +24,6 @@ export default function AvatarLabel({
         <p className="userName">{userName}</p>
         <p className="userLink">{userLink}</p>
       </div>
-    </div>
+    </Link>
   );
 }

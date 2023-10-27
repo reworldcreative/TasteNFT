@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./artworkPage.scss";
 import Header from "@/components/Header/Header";
 
 import PictureComponent from "@/../plugins/PictureComponent";
 import bannerImage from "@/img/banner.jpg";
 import NftBid from "@/components/NFTBid/NftBid";
+import NftBuy from "@/components/NFTBid/NftBuy";
 
 import AvatarLabel from "@/components/AvatarLabel/AvatarLabel";
 import LinksList from "@/components/LinksList/LinksList";
@@ -17,11 +18,24 @@ import bidImage from "@/img/tasteNFT_logo_2.jpg";
 
 import avatarMain from "@/img/avatars/avatar_1.jpg";
 import avatar8 from "@/img/avatars/avatar_8.jpg";
+import PopUpWrapper from "@/components/PopUps/PopUpWrapper";
+import PlaceBid from "@/components/PopUps/PlaceBid/PlaceBid";
+import NftList from "@/components/NftList/NftList";
 
 export default function ArtworkPage() {
-  const filteredNftList = [...nftList];
+  const [isOpenPopUp, setIsOpenPopUp] = useState(false);
+  const PopUpOpenButtonClick = () => {
+    setIsOpenPopUp(!isOpenPopUp);
+  };
+
   return (
     <>
+      <PopUpWrapper
+        isOpenPopUp={isOpenPopUp}
+        toggleModal={PopUpOpenButtonClick}
+      >
+        <PlaceBid />
+      </PopUpWrapper>
       <Header />
       <section className="banner">
         <div className="banner__wrapper">
@@ -31,7 +45,8 @@ export default function ArtworkPage() {
             className="banner__image"
           />
 
-          <NftBid />
+          <NftBid onButtonClick={PopUpOpenButtonClick} />
+          {/* <NftBuy /> */}
         </div>
       </section>
 
@@ -153,25 +168,7 @@ export default function ArtworkPage() {
         <div className="feature-works-section__wrapper">
           <h2 className="section-title">Feature works</h2>
 
-          <div className="nft-List">
-            {filteredNftList.length ? (
-              filteredNftList
-                .slice(0, 8)
-                .map((nftItem) => (
-                  <NftCard
-                    key={nftItem.id}
-                    title={nftItem.title}
-                    image={nftItem.image}
-                    width="317px"
-                    height="317px"
-                    avatar={nftItem.avatar}
-                    bidImage={nftItem.bidImage}
-                  />
-                ))
-            ) : (
-              <p className="empty-message">Empty list</p>
-            )}
-          </div>
+          <NftList filteredNftList={nftList} />
         </div>
       </section>
     </>

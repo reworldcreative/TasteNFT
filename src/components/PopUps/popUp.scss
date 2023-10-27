@@ -1,0 +1,71 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+.ReactModal {
+  &Portal {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__Overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  &__Content {
+    background: $second-color !important;
+    border: none !important;
+    padding: 45px 24px 32px !important;
+    border-radius: 32px !important;
+    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05) !important;
+    width: 653px !important;
+    margin: auto !important;
+    inset: auto !important;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 99px;
+      background-color: transparent;
+    }
+
+    .popUpContent {
+      .section-title {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .section-text {
+        &_accent {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      .button {
+        font-size: 14px;
+        width: 157px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.closeModalButton {
+  position: absolute;
+  padding: 0px;
+  top: 51px;
+  right: 24px;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

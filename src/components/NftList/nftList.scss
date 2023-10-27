@@ -1,0 +1,16 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.nft-List {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+  .nft-List {
+    justify-content: center;
+  }
+}

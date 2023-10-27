@@ -3,7 +3,7 @@ import NftBidPrice from "./NftBidPrice";
 import "./nftBid.scss";
 import bidImage from "@/img/tasteNFT_logo_2.jpg";
 
-export default function NftBid() {
+export default function NftBid({ onButtonClick }) {
   return (
     <div className="nftBid">
       <div className="nftBid__item">
@@ -23,7 +23,7 @@ export default function NftBid() {
       </div>
       <div className="nftDivider" />
       <div className="nftBid__item">
-        <Button>Place a bid</Button>
+        <Button onButtonClick={onButtonClick}>Place a bid</Button>
       </div>
     </div>
   );

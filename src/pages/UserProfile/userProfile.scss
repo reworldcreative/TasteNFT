@@ -1,0 +1,8 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.userInfo {
+  &__right {
+    gap: 16px;
+  }
+}

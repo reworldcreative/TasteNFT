@@ -36,6 +36,7 @@ import nftimage7 from "@/img/nft/nft_7.jpg";
 import nftimage8 from "@/img/nft/nft_8.jpg";
 import nftimage9 from "@/img/nft/nft_9.jpg";
 import nftimage10 from "@/img/nft/nft_10.jpg";
+import NftList from "@/components/NftList/NftList";
 
 export default function MainPage() {
   const [selectedTypeValue, setSelectedTypeValue] = useState("Auctions");
@@ -115,23 +116,9 @@ export default function MainPage() {
             />
           </div>
 
-          <div className="nft-List">
-            {filteredNftList.length ? (
-              filteredNftList.map((nftItem) => (
-                <NftCard
-                  key={nftItem.id}
-                  title={nftItem.title}
-                  image={nftItem.image}
-                  width="317px"
-                  height="317px"
-                  avatar={nftItem.avatar}
-                  bidImage={nftItem.bidImage}
-                />
-              ))
-            ) : (
-              <p className="empty-message">Empty list</p>
-            )}
-            {/* <NftCard
+          <NftList filteredNftList={filteredNftList} />
+
+          {/* <NftCard
               title="WFH - art name"
               image={nftimage1}
               width="317px"
@@ -195,7 +182,6 @@ export default function MainPage() {
               avatar={avatar8}
               bidImage={bidImage}
             /> */}
-          </div>
         </div>
       </section>
 

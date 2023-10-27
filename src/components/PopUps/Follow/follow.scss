@@ -1,0 +1,26 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.follow-list {
+  list-style: none;
+  margin: 0px;
+  margin-top: 32px;
+  padding: 0px;
+  display: grid;
+  gap: 32px;
+  max-height: 360px;
+
+  &__item {
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .button {
+      padding: 12px 32px;
+    }
+  }
+}
