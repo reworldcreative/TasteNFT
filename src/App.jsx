@@ -8,15 +8,17 @@ import MainPage from "./pages/MainPage/MainPage";
 import ArtworkPage from "./pages/Artwork/ArtworkPage";
 import CreatorProfile from "./pages/CreatorProfile/CreatorProfile";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Search from "./pages/Search/Search";
 
 export default function App() {
   return (
     <>
       <Routes>
         <Route exact path="/" element={<MainPage />} />
-        <Route exact path="/artwork" element={<ArtworkPage />} />
+        <Route exact path="/artwork/:id" element={<ArtworkPage />} />
         <Route exact path="/creator-profile" element={<CreatorProfile />} />
         <Route exact path="/user-profile" element={<UserProfile />} />
+        <Route exact path="/search" element={<Search />} />
         <Route
           exact
           path="*"

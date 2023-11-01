@@ -1,0 +1,31 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.sale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__sum {
+    display: grid;
+    gap: 8px;
+  }
+}
+
+.counter {
+  display: flex;
+  gap: 11px;
+  margin-top: 6px;
+  align-items: center;
+  &__button {
+    font-size: 40px !important;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+}

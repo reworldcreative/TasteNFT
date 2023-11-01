@@ -1,22 +1,23 @@
 import NftCard from "@/components/NftCard/NftCard";
 import "./nftList.scss";
-export default function NftList({ filteredNftList }) {
+export default function NftList({ filteredNftList, onTimeEditClick }) {
   return (
     <div className="nft-List">
       {filteredNftList.length ? (
-        filteredNftList
-          .slice(0, 8)
-          .map((nftItem) => (
-            <NftCard
-              key={nftItem.id}
-              title={nftItem.title}
-              image={nftItem.image}
-              width="317px"
-              height="317px"
-              avatar={nftItem.avatar}
-              bidImage={nftItem.bidImage}
-            />
-          ))
+        filteredNftList.map((nftItem) => (
+          <NftCard
+            key={nftItem.id}
+            id={nftItem.id}
+            title={nftItem.title}
+            image={nftItem.image}
+            width="317"
+            height="317"
+            avatar={nftItem.avatar}
+            bidImage={nftItem.bidImage}
+            onTimeEditClick={onTimeEditClick}
+            status={nftItem.status}
+          />
+        ))
       ) : (
         <p className="empty-message">Empty list</p>
       )}

@@ -6,7 +6,8 @@
     "avatar": "img/avatars/avatar_1.jpg",
     "bidImage": "img/tasteNFT_logo_1.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Approved"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "avatar": "img/avatars/avatar_2.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "On moderation"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "avatar": "img/avatars/avatar_3.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Approved"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "avatar": "img/avatars/avatar_4.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Declined"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "avatar": "img/avatars/avatar_5.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Approved"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "avatar": "img/avatars/avatar_6.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "On moderation"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "avatar": "img/avatars/avatar_7.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Declined"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "avatar": "img/avatars/avatar_8.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Declined"
   },
   {
     "id": 9,
@@ -78,15 +86,17 @@
     "avatar": "img/avatars/avatar_5.jpg",
     "bidImage": "img/tasteNFT_logo_1.jpg",
     "type": "Sell",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Approved"
   },
   {
     "id": 10,
-    "title": "WFH - art name",
+    "title": "WFH - art top name",
     "image": "img/nft/nft_7.jpg",
     "avatar": "img/avatars/avatar_3.jpg",
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Sell",
-    "data": "Recently added"
+    "data": "Recently added",
+    "status": "Approved"
   }
 ]

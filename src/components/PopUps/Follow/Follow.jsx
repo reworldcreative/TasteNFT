@@ -16,8 +16,8 @@ export default function Follow({ data }) {
                 className="avatarMainLabel"
                 userName={item.userName}
                 userLink={item.userLink}
-                avatarWidth="49px"
-                avatarHeight="49px"
+                avatarWidth="49"
+                avatarHeight="49"
                 avatarImage={item.avatarImage}
               />
               <Button>Follow</Button>

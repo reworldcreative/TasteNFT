@@ -1,0 +1,104 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.userHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: fit-content;
+  width: -webkit-fill-available;
+  align-items: center;
+  z-index: 50;
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatarMainLabel {
+    gap: 10px;
+
+    .userName {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+
+    .userLink {
+      font-size: 12px;
+    }
+  }
+
+  .bid-component {
+    &__image {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__counter {
+      font-size: 12px;
+    }
+  }
+
+  .button {
+    height: fit-content;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__menu {
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+
+  &__bid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    margin-left: -22px;
+    margin-bottom: 2px;
+
+    .section-text_accent {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    margin-left: 6px;
+    background: 0px;
+    border: 0px;
+    padding: 0px;
+    cursor: pointer;
+
+    img {
+      width: 12px;
+      height: 7px;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .userHeader {
+    justify-content: center;
+    &__menu {
+      width: min-content;
+    }
+    &__content {
+      gap: 2px;
+    }
+
+    &__bid {
+      margin-left: 0px;
+    }
+  }
+}

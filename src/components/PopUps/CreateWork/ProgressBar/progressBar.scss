@@ -1,0 +1,29 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.progressBar {
+  height: 5px;
+  max-width: 462px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: auto;
+  padding: 0px;
+  list-style: none;
+  &__step {
+    height: 100%;
+    background-color: transparent;
+    width: 32.47%;
+    border-radius: 12px;
+    &.active {
+      background: $active-gradient;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+}

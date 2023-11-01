@@ -15,10 +15,19 @@ export default function NftBid({ onButtonClick }) {
       <div className="nftDivider" />
       <div className="nftBid__item">
         <p className="section-text_accent">Auction ending in:</p>
-        <div style={{ display: "flex", gap: "5px" }}>
-          <p className="section-text"> 1 h</p>
-          <p className="section-text"> 28 m</p>
-          <p className="section-text"> 32 s</p>
+        <div style={{ display: "flex", gap: "8px" }}>
+          <p className="section-text">
+            {" "}
+            1 <span className="section-text__time">h</span>
+          </p>
+          <p className="section-text">
+            {" "}
+            28 <span className="section-text__time">m</span>
+          </p>
+          <p className="section-text">
+            {" "}
+            32 <span className="section-text__time">s</span>
+          </p>
         </div>
       </div>
       <div className="nftDivider" />

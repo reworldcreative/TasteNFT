@@ -30,40 +30,40 @@ export default function CreatorProfile() {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: "./img/avatars/avatar_1.jpg",
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar13,
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar14,
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar15,
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar16,
     },
 
@@ -71,24 +71,24 @@ export default function CreatorProfile() {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar13,
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar14,
     },
     {
       className: "avatarMainLabel",
       userName: "User Name",
       userLink: "@username",
-      avatarWidth: "49px",
-      avatarHeight: "49px",
+      avatarWidth: "49",
+      avatarHeight: "49",
       avatarImage: avatar15,
     },
   ];
@@ -113,17 +113,28 @@ export default function CreatorProfile() {
         <Follow data={FollowingData} />
       </PopUpWrapper>
 
-      <Header />
+      <Header>
+        <Button
+          onButtonClick={() => {
+            window.location.href = "/#/user-profile";
+          }}
+        >
+          Connect wallet
+        </Button>
+      </Header>
 
-      <section className="creatorInfo">
+      <section className="creatorInfo" aria-labelledby="creatorInfo__title">
         <div className="creatorInfo__wrapper">
+          <h2 className="visibility-hidden" id="creatorInfo__title">
+            creator Info
+          </h2>
           <div className="creatorInfo__column">
             <AvatarLabel
               className="avatarMainLabel"
               userName="User Name"
               userLink="@username"
-              avatarWidth="49px"
-              avatarHeight="49px"
+              avatarWidth="49"
+              avatarHeight="49"
               avatarImage={mainAvatar}
             />
 
@@ -156,10 +167,13 @@ export default function CreatorProfile() {
         </div>
       </section>
 
-      <section className="creatorWorks">
+      <section className="creatorWorks" aria-labelledby="creatorWorks__title">
         <div className="creatorWorks__wrapper">
+          <h2 className="visibility-hidden" id="creatorWorks__title">
+            creator Works
+          </h2>
           <CheckboxSelectors titles={["Created", "Collected"]} />
-          <NftList filteredNftList={nftList} />
+          <NftList filteredNftList={nftList.slice(0, 8)} />
         </div>
       </section>
     </>

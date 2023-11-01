@@ -1,0 +1,30 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.createWorkPopUp {
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__content {
+    // padding: 16px 27px 0px;
+    padding: 16px 3px 0;
+  }
+
+  &__error {
+    font-weight: 400;
+    color: #ff5e54;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: rgba(255, 94, 84, 0.1);
+    margin-bottom: 23px;
+  }
+
+  .button {
+    padding: 12px 0px;
+    margin: 32px auto 0px;
+    font-size: 14px;
+    width: 157px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.upload {
+  // margin-top: 20px;
+  display: grid;
+  gap: 12px;
+  &__title {
+    text-align: center;
+  }
+
+  .section-text_accent {
+    font-size: 14px;
+  }
+
+  &__property {
+    max-width: 110px;
+    margin: auto;
+  }
+
+  &__text {
+    display: grid;
+    gap: 30px;
+    text-align: center;
+  }
+
+  &__container {
+    border-radius: 16px;
+    // border: 1px dashed #c4c4c4;
+    background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(196, 196, 196); stroke-width: 2; stroke-dasharray: 10'/></svg>");
+    width: 100%;
+    // height: 360px;
+    @include rfs(49vh, height);
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .inputfile {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+}

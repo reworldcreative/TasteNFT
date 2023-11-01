@@ -1,0 +1,39 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.editList {
+  position: absolute;
+  right: 16px;
+  top: 22px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+
+  display: grid;
+  gap: 12px;
+
+  &__button {
+    border-radius: 99px;
+    border: none;
+    background: $main;
+    padding: 7px;
+
+    img {
+      display: block;
+    }
+
+    &.settings {
+      &.active {
+        background: rgba(255, 255, 255, 0.5);
+        img {
+          filter: none;
+        }
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        filter: invert(100%);
+      }
+    }
+  }
+}

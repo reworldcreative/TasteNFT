@@ -29,8 +29,12 @@ export default function PopUpWrapper({ children, isOpenPopUp, toggleModal }) {
       contentLabel="buy nft Modal window"
     >
       {children}
-      <button className="closeModalButton" onClick={toggleModal}>
-        <img src={closeIcon} alt="close icon" />
+      <button
+        className="closeModalButton"
+        onClick={toggleModal}
+        aria-label="Close popup window"
+      >
+        <img src={closeIcon} alt="close icon" aria-hidden="true" />
       </button>
     </Modal>
   );

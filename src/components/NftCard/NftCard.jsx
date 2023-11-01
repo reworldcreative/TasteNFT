@@ -3,7 +3,9 @@ import "./nftCard.scss";
 
 import AvatarLabel from "../AvatarLabel/AvatarLabel";
 import BidComponent from "../Bid/Bid";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import CardStat from "./CardStat/CardStat";
+import EditList from "./EditList/EditList";
 
 export default function nftCard({
   title,
@@ -12,18 +14,37 @@ export default function nftCard({
   height,
   avatar,
   bidImage,
+  id,
+  onTimeEditClick,
+  status,
 }) {
+  const location = useLocation();
+  const showAvatarLabel = location.pathname !== "/user-profile";
+
+  // const CardStatText = () => {
+  //   const statuses = ["Approved", "On moderation", "Declined"];
+  //   const randomIndex = Math.floor(Math.random() * statuses.length);
+  //   return statuses[randomIndex];
+  // };
+
   return (
-    <article className="nftCard">
-      <AvatarLabel
-        className="avatarLabel"
-        userName="User Name"
-        userLink="@username"
-        avatarWidth="26px"
-        avatarHeight="26px"
-        avatarImage={avatar}
-      />
-      <Link to={"/artwork"}>
+    <article className="nftCard" id={id}>
+      {showAvatarLabel ? (
+        <AvatarLabel
+          className="avatarLabel"
+          userName="User Name"
+          userLink="@username"
+          avatarWidth="26"
+          avatarHeight="26"
+          avatarImage={avatar}
+        />
+      ) : (
+        <>
+          <CardStat text={status} />
+          <EditList onTimeEditClick={onTimeEditClick} cardStat={status} />
+        </>
+      )}
+      <Link to={`/artwork/${id}`}>
         <PictureComponent
           src={image}
           alt="nft image"

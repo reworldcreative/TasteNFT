@@ -14,8 +14,8 @@ export default function LinksList() {
               src={externalIcon}
               alt="external link"
               className="links-icon"
-              width="20px"
-              height="20px"
+              width="20"
+              height="20"
             />
           </a>
         </LinksItem>
@@ -25,8 +25,8 @@ export default function LinksList() {
               src={shareIcon}
               alt="share link"
               className="links-icon"
-              width="20px"
-              height="20px"
+              width="20"
+              height="20"
             />
           </a>
         </LinksItem>
@@ -36,8 +36,8 @@ export default function LinksList() {
               src={verticalDotsIcon}
               alt="menu link"
               className="links-icon"
-              width="20px"
-              height="20px"
+              width="20"
+              height="20"
             />
           </a>
         </LinksItem>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "./mainPage.scss";
 import Header from "@/components/Header/Header";
 import AvatarLabel from "@/components/AvatarLabel/AvatarLabel";
@@ -41,21 +41,39 @@ import NftList from "@/components/NftList/NftList";
 export default function MainPage() {
   const [selectedTypeValue, setSelectedTypeValue] = useState("Auctions");
   const [selectedDataValue, setSelectedDataValue] = useState("Recently added");
-  const [filteredNftList, setFilteredNftList] = useState([]);
+  // const [filteredNftList, setFilteredNftList] = useState([]);
 
-  useEffect(() => {
-    setFilteredNftList(
+  // useEffect(() => {
+  //   setFilteredNftList(
+  //     nftList.filter(
+  //       (nftItem) =>
+  //         nftItem.type === selectedTypeValue &&
+  //         nftItem.data === selectedDataValue
+  //     )
+  //   );
+  // }, [selectedTypeValue, selectedDataValue]);
+
+  const filteredNftList = useMemo(
+    () =>
       nftList.filter(
         (nftItem) =>
           nftItem.type === selectedTypeValue &&
           nftItem.data === selectedDataValue
-      )
-    );
-  }, [selectedTypeValue, selectedDataValue]);
+      ),
+    [nftList, selectedTypeValue, selectedDataValue]
+  );
 
   return (
     <>
-      <Header />
+      <Header>
+        <Button
+          onButtonClick={() => {
+            window.location.href = "/#/user-profile";
+          }}
+        >
+          Connect wallet
+        </Button>
+      </Header>
       <section className="main-section">
         <div className="main-section__wrapper">
           <div className="main-section__content">
@@ -63,8 +81,8 @@ export default function MainPage() {
               className="avatarMainLabel"
               userName="User Name"
               userLink="@username"
-              avatarWidth="49px"
-              avatarHeight="49px"
+              avatarWidth="49"
+              avatarHeight="49"
               avatarImage={avatarMain}
             />
 
@@ -93,8 +111,14 @@ export default function MainPage() {
         </div>
       </section>
 
-      <section className="nft-list-section">
+      <section
+        className="nft-list-section"
+        aria-labelledby="nft-list-section__title"
+      >
         <div className="nft-list-section__wrapper">
+          <h2 className="visibility-hidden" id="nft-list-section__title">
+            nft list section
+          </h2>
           <div className="selectors">
             <Selector
               id={"sell-data-selector"}
@@ -116,7 +140,7 @@ export default function MainPage() {
             />
           </div>
 
-          <NftList filteredNftList={filteredNftList} />
+          <NftList filteredNftList={filteredNftList.slice(0, 8)} />
 
           {/* <NftCard
               title="WFH - art name"
@@ -185,15 +209,20 @@ export default function MainPage() {
         </div>
       </section>
 
-      <section className="FeaturedCreators-section">
+      <section
+        className="FeaturedCreators-section"
+        aria-labelledby="FeaturedCreators-section__title"
+      >
         <div className="FeaturedCreators-section__wrapper">
-          <h2 className="section-title">Featured creators</h2>
+          <h2 className="section-title" id="FeaturedCreators-section__title">
+            Featured creators
+          </h2>
 
           <div className="FeaturedCreators-section__list">
             <CreatorCard
               image={avatarMain}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -202,8 +231,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar9}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -212,8 +241,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar10}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -222,8 +251,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar11}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -232,8 +261,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar12}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -242,8 +271,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar10}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -252,8 +281,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar9}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -262,8 +291,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatarMain}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -272,8 +301,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar11}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"
@@ -282,8 +311,8 @@ export default function MainPage() {
 
             <CreatorCard
               image={avatar9}
-              width="80px"
-              height="80px"
+              width="80"
+              height="80"
               name="User Name"
               link="@username"
               sales="24"

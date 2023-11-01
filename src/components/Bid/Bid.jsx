@@ -8,8 +8,8 @@ export default function BidComponent({ image, counter }) {
         src={image}
         alt="bid image"
         className="bid-component__image"
-        width="19px"
-        height="19px"
+        width="19"
+        height="19"
       />
       <p className="bid-component__counter">{counter}</p>
     </div>

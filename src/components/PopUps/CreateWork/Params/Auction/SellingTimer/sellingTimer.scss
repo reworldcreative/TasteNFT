@@ -1,0 +1,36 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.sellingTimer {
+  margin-top: 24px;
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+
+  &__timerButton {
+    margin-top: 8px;
+    background: $active-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0px;
+    cursor: pointer;
+  }
+
+  // .timeChange {
+  //   .section-title {
+  //     display: none;
+  //   }
+
+  //   .bidPopup__content {
+  //     margin-top: 0px;
+  //   }
+
+  //   .button {
+  //     display: none;
+  //   }
+  // }
+}

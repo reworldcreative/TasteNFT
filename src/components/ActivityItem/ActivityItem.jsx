@@ -23,8 +23,8 @@ export default function ActivityItem({
           src={avatar}
           alt="avatar"
           className="avatar"
-          width="32px"
-          height="32px"
+          width="32"
+          height="32"
         />
 
         <div className="activity__text">
@@ -35,7 +35,7 @@ export default function ActivityItem({
       <div className="activity__right">
         <NftBidPrice bidImage={bidImage} counter={counter} price={price} />
         <Button>
-          <img src={external} alt="eternal icon" width="20px" height="20px" />
+          <img src={external} alt="eternal icon" width="20" height="20" />
         </Button>
       </div>
     </li>

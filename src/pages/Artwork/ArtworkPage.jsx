@@ -21,12 +21,22 @@ import avatar8 from "@/img/avatars/avatar_8.jpg";
 import PopUpWrapper from "@/components/PopUps/PopUpWrapper";
 import PlaceBid from "@/components/PopUps/PlaceBid/PlaceBid";
 import NftList from "@/components/NftList/NftList";
+import Button from "@/components/Button/Button";
+import { useParams } from "react-router-dom";
 
 export default function ArtworkPage() {
+  const { id } = useParams();
+
   const [isOpenPopUp, setIsOpenPopUp] = useState(false);
   const PopUpOpenButtonClick = () => {
     setIsOpenPopUp(!isOpenPopUp);
   };
+
+  const currentItem = nftList.find((item) => item.id === +id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   return (
     <>
@@ -34,18 +44,40 @@ export default function ArtworkPage() {
         isOpenPopUp={isOpenPopUp}
         toggleModal={PopUpOpenButtonClick}
       >
-        <PlaceBid />
+        <PlaceBid onPlaceBid={PopUpOpenButtonClick} />
       </PopUpWrapper>
-      <Header />
-      <section className="banner">
+      <Header>
+        <Button
+          onButtonClick={() => {
+            window.location.href = "/#/user-profile";
+          }}
+        >
+          Connect wallet
+        </Button>
+      </Header>
+      <section className="banner" aria-labelledby="nft-work-banner">
         <div className="banner__wrapper">
+          <h2 className="visibility-hidden" id="nft-work-banner">
+            nft work banner
+          </h2>
           <PictureComponent
-            src={bannerImage}
+            // src={bannerImage}
+            src={currentItem.image}
             alt="banner"
             className="banner__image"
           />
 
-          <NftBid onButtonClick={PopUpOpenButtonClick} />
+          {
+            currentItem.type === "Auctions" ? (
+              <NftBid onButtonClick={PopUpOpenButtonClick} />
+            ) : currentItem.type === "Sell" ? (
+              <NftBuy />
+            ) : (
+              <></>
+            )
+            // currentItem.type === "..."? (...)
+          }
+          {/* <NftBid onButtonClick={PopUpOpenButtonClick} /> */}
           {/* <NftBuy /> */}
         </div>
       </section>
@@ -57,15 +89,15 @@ export default function ArtworkPage() {
               className="avatarMainLabel"
               userName="User Name"
               userLink="@username"
-              avatarWidth="49px"
-              avatarHeight="49px"
-              avatarImage={avatarMain}
+              avatarWidth="49"
+              avatarHeight="49"
+              avatarImage={currentItem.avatar}
             />
 
             <div className="user-info-section__text">
-              <h1 className="section-title">WFH - art name</h1>
+              <h1 className="section-title">{currentItem.title}</h1>
               <p className="section-text">
-                <span className="section-text_accent">Сopy:</span> 2 of 10
+                <span className="section-text_accent">Copy:</span> 2 of 10
               </p>
               <p className="section-text">
                 <span className="section-text_accent">Description:</span> The
@@ -164,11 +196,16 @@ export default function ArtworkPage() {
         </div>
       </section>
 
-      <section className="feature-works-section">
+      <section
+        className="feature-works-section"
+        aria-labelledby="feature-works-section__title"
+      >
         <div className="feature-works-section__wrapper">
-          <h2 className="section-title">Feature works</h2>
+          <h2 className="section-title" id="feature-works-section__title">
+            Feature works
+          </h2>
 
-          <NftList filteredNftList={nftList} />
+          <NftList filteredNftList={nftList.slice(0, 8)} />
         </div>
       </section>
     </>

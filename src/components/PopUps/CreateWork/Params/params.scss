@@ -1,0 +1,33 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.params {
+  &__input {
+    display: grid;
+    gap: 8px;
+  }
+
+  &__textContainer {
+    display: grid;
+    gap: 24px;
+  }
+
+  &__inputComponent {
+    border: none;
+    border-radius: 8px;
+    background: $base-color;
+    color: $main;
+    @include Font(14px, 500);
+    padding: 12px 16px;
+
+    &:focus {
+      border-color: $main;
+      box-shadow: 0 0 5px $main;
+      outline: none;
+    }
+  }
+
+  &__copies {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.censor {
+  display: grid;
+  gap: 12px;
+  &__image {
+    border-radius: 16px;
+    width: 100%;
+    @include rfs(61vh, height);
+  }
+
+  &__icons {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 4px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+}
