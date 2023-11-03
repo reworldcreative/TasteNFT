@@ -49,7 +49,11 @@ export default function ArtworkPage() {
       <Header>
         <Button
           onButtonClick={() => {
-            window.location.href = "/#/user-profile";
+            // window.location.href = "/#/user-profile";
+            window.location.href =
+              window.location.origin +
+              window.location.pathname +
+              "#/user-profile";
           }}
         >
           Connect wallet
@@ -96,9 +100,15 @@ export default function ArtworkPage() {
 
             <div className="user-info-section__text">
               <h1 className="section-title">{currentItem.title}</h1>
-              <p className="section-text">
-                <span className="section-text_accent">Copy:</span> 2 of 10
-              </p>
+
+              {currentItem.type === "Auctions" ? (
+                <p className="section-text">
+                  <span className="section-text_accent">Copy:</span> 2 of 10
+                </p>
+              ) : (
+                <></>
+              )}
+
               <p className="section-text">
                 <span className="section-text_accent">Description:</span> The
                 iconic meme that became a viral Internet sensation and an
@@ -122,7 +132,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -130,7 +144,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -138,7 +156,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -146,7 +168,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -154,7 +180,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -162,7 +192,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -170,7 +204,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -178,7 +216,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"
@@ -186,7 +228,11 @@ export default function ArtworkPage() {
               <ActivityItem
                 avatar={avatar8}
                 bidImage={bidImage}
-                caption="Bid placed by 0x6FC0...14A4"
+                caption={
+                  currentItem.type === "Auctions"
+                    ? "Bid placed by 0x6FC0...14A4"
+                    : "Bought by 0x6FC0...14A4"
+                }
                 data=" May 19, 2021 at 2:27pm"
                 counter="1,5M"
                 price="1308.54$"

@@ -21,7 +21,9 @@ export default function Header({ children }) {
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      window.location.href = "/#/search";
+      // window.location.href = "#/search";
+      window.location.href =
+        window.location.origin + window.location.pathname + "#/search";
     }
   };
   return (

@@ -5,12 +5,15 @@
   // margin-top: 20px;
   display: grid;
   gap: 12px;
-  &__title {
-    text-align: center;
-  }
 
   .section-text_accent {
     font-size: 14px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: 600;
   }
 
   &__property {
@@ -30,7 +33,7 @@
     background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(196, 196, 196); stroke-width: 2; stroke-dasharray: 10'/></svg>");
     width: 100%;
     // height: 360px;
-    @include rfs(49vh, height);
+    @include rfs(47vh, height);
 
     position: relative;
     display: flex;

@@ -1,0 +1,22 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.success {
+  .section-title {
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__content {
+    margin-top: 25px;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__icon {
+    border-radius: 50%;
+  }
+}

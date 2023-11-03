@@ -1,0 +1,65 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.BalanceSwap {
+  position: relative;
+
+  &__head {
+    display: flex;
+    align-items: center;
+  }
+  .section-title {
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .bidInputPopUp__input {
+    width: 176px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .bid-component {
+    gap: 9px;
+  }
+
+  &__backButton {
+    position: absolute;
+    // top: 47px;
+    // left: 32px;
+    top: 0px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    background: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: grid;
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  &__value {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+  }
+
+  .button {
+    padding: 12px 0px;
+    width: 157px;
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+
+    margin-top: 32px;
+  }
+}

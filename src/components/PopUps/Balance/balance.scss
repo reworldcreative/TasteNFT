@@ -1,0 +1,53 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.balance {
+  .section-title {
+    font-size: 24px;
+  }
+
+  &__list {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 17px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    background: $base-color;
+    border-radius: 16px;
+    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    display: grid;
+    gap: 15px;
+    // width: 43%;
+    width: 43.9%;
+  }
+
+  &__currency {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__logo {
+    border-radius: 50%;
+  }
+
+  &__swapButton {
+    border: none;
+    background: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    color: #ff5693;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+}

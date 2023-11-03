@@ -16,12 +16,16 @@
   &__form {
     margin-top: 32px;
     display: grid;
-    gap: 24px;
+    gap: 25px;
 
     .inputContainer {
       display: grid;
-      gap: 8px;
+      gap: 10px;
       flex: 1;
+    }
+
+    .timeChange__text.delete {
+      margin: 0px;
     }
 
     .section-text_accent {
@@ -55,6 +59,7 @@
 
       &__avatar {
         border-radius: 99px;
+        // clip-path: circle(46% at 50% 50%);
       }
 
       &__text {
@@ -97,7 +102,7 @@
 
     &-list {
       display: grid;
-      gap: 10px;
+      gap: 12px;
 
       list-style: none;
       padding: 0px;
@@ -120,9 +125,41 @@
       }
     }
   }
+
+  .errorMessage {
+    margin: 0px;
+    color: red;
+    font-size: 13px;
+    font-weight: 500;
+  }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 700px) {
+  .profileEditor {
+    &__form {
+      .inputContainer {
+        flex: auto;
+      }
+    }
+
+    &__contacts {
+      .inputContacts {
+        flex-wrap: wrap;
+        &__label {
+          flex: none;
+          width: 20%;
+        }
+
+        .userInput {
+          flex: none;
+          width: 94%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
   .profileEditor {
     &__form {
       .userInput {

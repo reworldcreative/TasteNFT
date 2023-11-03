@@ -4,12 +4,20 @@ import CheckboxSelectors from "../../CheckboxSelectors/CheckboxSelectors";
 import "./follow.scss";
 
 export default function Follow({ data }) {
+  const [followStates, setFollowStates] = useState(data.map(() => false));
+
+  const handleFollow = (index) => {
+    const newFollowStates = [...followStates];
+    newFollowStates[index] = !newFollowStates[index];
+    setFollowStates(newFollowStates);
+  };
+
   return (
     <>
-      <div>
+      <div className="followPopUp">
         <CheckboxSelectors titles={["Following", "Followers"]} />
 
-        <ul className="follow-list">
+        <div className="follow-list">
           {data.map((item, index) => (
             <li key={index} className="follow-list__item">
               <AvatarLabel
@@ -20,10 +28,15 @@ export default function Follow({ data }) {
                 avatarHeight="49"
                 avatarImage={item.avatarImage}
               />
-              <Button>Follow</Button>
+              <Button
+                onButtonClick={() => handleFollow(index)}
+                addedClass={followStates[index] ? "followed" : ""}
+              >
+                {!followStates[index] ? "Follow" : "Unfollow"}
+              </Button>
             </li>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

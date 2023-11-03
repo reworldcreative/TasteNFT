@@ -49,6 +49,9 @@ export default function UserProfile() {
       </Header>
 
       <section className="creatorInfo userInfo">
+        <h1 className="section-title creatorInfo__title visibility-hidden">
+          User Name
+        </h1>
         <div className="creatorInfo__wrapper">
           <div className="creatorInfo__column">
             <AvatarLabel
@@ -72,7 +75,7 @@ export default function UserProfile() {
           <SocialsList />
 
           <p className="section-text creatorInfo__text">
-            <span className="section-text_accent">Description:</span>The iconic
+            <span className="section-text_accent">Description:</span> The iconic
             meme that became a viral Internet sensation and an indispensable
             part of the gachimuchi music genre. This was taken when I was very
             young and in my full "performance" attire. That part of me now
@@ -87,6 +90,9 @@ export default function UserProfile() {
       </section>
 
       <section className="creatorWorks">
+        <h2 className="section-title creatorWorks__title visibility-hidden">
+          Works
+        </h2>
         <div className="creatorWorks__wrapper">
           <CheckboxSelectors titles={["Created", "Collected", "Bids"]} />
           <NftList

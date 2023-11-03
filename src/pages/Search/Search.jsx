@@ -44,7 +44,11 @@ export default function Search() {
       <Header>
         <Button
           onButtonClick={() => {
-            window.location.href = "/#/user-profile";
+            // window.location.href = "/#/user-profile";
+            window.location.href =
+              window.location.origin +
+              window.location.pathname +
+              "#/user-profile";
           }}
         >
           Connect wallet

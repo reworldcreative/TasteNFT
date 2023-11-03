@@ -20,6 +20,7 @@
       background: none;
       padding: 0px;
       cursor: pointer;
+      margin-left: 9px;
 
       img {
         display: flex;
@@ -27,6 +28,20 @@
         height: 10.379px;
         filter: invert(52%) sepia(6%) saturate(5409%) hue-rotate(315deg)
           brightness(97%) contrast(111%);
+      }
+    }
+  }
+
+  .bidPopup {
+    &__input {
+      &.data {
+        width: 127px;
+        box-sizing: border-box;
+      }
+      &.time {
+        width: 75px;
+        box-sizing: border-box;
+        margin-right: 4px;
       }
     }
   }

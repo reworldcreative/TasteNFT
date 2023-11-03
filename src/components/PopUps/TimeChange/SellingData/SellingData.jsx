@@ -8,20 +8,20 @@ export default function SellingData() {
 
   const ChangeData = (e) => {
     const inputValue = e.target.value;
-    if (!isNaN(inputValue)) {
+    if (/^[\d.]*$/.test(inputValue)) {
       setDataValue(inputValue);
     }
   };
 
   const ChangeTime = (e) => {
     const inputValue = e.target.value;
-    if (!isNaN(inputValue)) {
+    if (/^[\d:]*$/.test(inputValue)) {
       setTimeValue(inputValue);
     }
   };
   return (
     <div className="bidPopup__bid">
-      <div className="bidPopup__input">
+      <div className="bidPopup__input data">
         <input
           type="text"
           placeholder="22.02.2020"
@@ -30,7 +30,7 @@ export default function SellingData() {
           aria-label="auction end date"
         />
       </div>
-      <div className="bidPopup__input">
+      <div className="bidPopup__input time">
         <input
           type="text"
           placeholder="23:45"

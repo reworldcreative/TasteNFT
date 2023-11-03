@@ -1,0 +1,27 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.wallet {
+  .section-title {
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__content {
+    margin: 16px 0px 32px;
+    display: flex;
+    gap: 57px;
+    flex-wrap: wrap;
+    padding-top: 27px;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 12px 0px;
+    width: 157px;
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+  }
+}

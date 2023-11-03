@@ -27,7 +27,7 @@
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
     "data": "Recently added",
-    "status": "Approved"
+    "status": "Declined"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
     "data": "Recently added",
-    "status": "Declined"
+    "status": "Approved"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
     "data": "Recently added",
-    "status": "On moderation"
+    "status": "Approved"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
     "data": "Recently added",
-    "status": "Declined"
+    "status": "Approved"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "bidImage": "img/tasteNFT_logo_2.jpg",
     "type": "Auctions",
     "data": "Recently added",
-    "status": "Declined"
+    "status": "Approved"
   },
   {
     "id": 9,

@@ -1,0 +1,56 @@
+@import "@/styles/variables";
+@import "rfs/scss";
+
+.step {
+  position: relative;
+  display: grid;
+  gap: 12px;
+
+  width: fit-content;
+  &__counter {
+    position: absolute;
+    z-index: 10;
+    top: -27px;
+    left: -9px;
+    border-radius: 16px;
+    background: $main;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+
+    &.section-text {
+      color: #1f2b38;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &__video {
+    border-radius: 16px;
+    background: #c4c4c4;
+    width: 160px;
+    height: 90px;
+
+    iframe {
+      border-radius: 16px;
+      width: 100%;
+      height: inherit;
+      position: absolute;
+
+      .ytp-chrome-top {
+        display: none !important;
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 160px;
+  }
+}
