@@ -10,6 +10,7 @@ const ReplaceImgWithPicturePlugin = require("./plugins/replace-img-with-picture"
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const webpack = require("webpack");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: isProduction ? "production" : "development",
@@ -29,6 +30,26 @@ module.exports = {
     // assetModuleFilename: "[path][name][ext]",
     // clean: true,
   },
+
+  optimization: isProduction
+    ? {
+        minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
+              output: {
+                comments: false,
+                beautify: false,
+              },
+            },
+            extractComments: false,
+          }),
+        ],
+      }
+    : {},
   performance: {
     hints: false,
     maxAssetSize: 512000,
@@ -48,7 +69,13 @@ module.exports = {
     rules: [
       {
         test: /\.(jsx|js)?$/,
-        use: "babel-loader",
+        // use: "babel-loader",
+        use: {
+          loader: "babel-loader",
+          options: {
+            compact: isProduction ? true : false,
+          },
+        },
         exclude: /node_modules/,
       },
       {
@@ -60,7 +87,13 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          // "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: isProduction ? true : false,
+            },
+          },
           {
             loader: "postcss-loader",
             options: {
@@ -69,7 +102,13 @@ module.exports = {
               },
             },
           },
-          "sass-loader",
+          // "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: isProduction ? true : false,
+            },
+          },
         ],
       },
       // {

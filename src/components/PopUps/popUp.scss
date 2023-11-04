@@ -82,3 +82,10 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .closeModalButton {
+    right: 20px;
+    top: 20px;
+  }
+}

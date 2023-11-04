@@ -62,6 +62,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "react-modal": "^3.16.1",
     "rfs": "^10.0.0",
+    "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "webpack-dev-server": "^4.15.1"

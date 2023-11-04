@@ -15,6 +15,11 @@
 
   cursor: pointer;
 
+  &:hover {
+    background: linear-gradient(140deg, #280c5a, #231d91);
+    color: #d637e9;
+  }
+
   &.followed {
     // background: $active-gradient;
     background: var(

@@ -13,6 +13,10 @@
   align-items: center;
   gap: 6px;
 
+  &:hover {
+    filter: invert(1);
+  }
+
   &__text {
     color: $main;
     margin: 0px;

@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     // gap: 17px;
     justify-content: space-between;
+    gap: 12px;
   }
 
   &__item {
@@ -49,5 +50,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .balance {
+    &__list {
+      justify-content: center;
+    }
+
+    &__item {
+      width: -webkit-fill-available;
+    }
   }
 }

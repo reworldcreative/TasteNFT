@@ -8,14 +8,14 @@ export default function SellingData() {
 
   const ChangeData = (e) => {
     const inputValue = e.target.value;
-    if (/^[\d.]*$/.test(inputValue)) {
+    if (/^(\d{0,2}\.{1})?(\d{0,2}\.{1})?\d{0,4}$/.test(inputValue)) {
       setDataValue(inputValue);
     }
   };
 
   const ChangeTime = (e) => {
     const inputValue = e.target.value;
-    if (/^[\d:]*$/.test(inputValue)) {
+    if (/^\d{0,2}(\:{1}\d{0,2})?$/.test(inputValue)) {
       setTimeValue(inputValue);
     }
   };

@@ -17,9 +17,11 @@
 
 .counter {
   display: flex;
-  gap: 11px;
+  // gap: 11px;
   margin-top: 6px;
   align-items: center;
+  width: 63px;
+  justify-content: space-between;
   &__button {
     font-size: 40px !important;
     font-weight: 700;
