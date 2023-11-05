@@ -13,8 +13,10 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: isProduction ? "production" : "development",
-  devtool: isProduction ? false : "inline-source-map",
+  // mode: isProduction ? "production" : "development",
+  mode: "production",
+  // devtool: isProduction ? false : "inline-source-map",
+  devtool: false,
   entry: {
     filename: path.resolve(__dirname, "src/index.jsx"),
   },
@@ -31,25 +33,42 @@ module.exports = {
     // clean: true,
   },
 
-  optimization: isProduction
-    ? {
-        minimize: true,
-        minimizer: [
-          new TerserPlugin({
-            terserOptions: {
-              compress: {
-                drop_console: true,
-              },
-              output: {
-                comments: false,
-                beautify: false,
-              },
-            },
-            extractComments: false,
-          }),
-        ],
-      }
-    : {},
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+          output: {
+            comments: false,
+            beautify: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+  },
+  // isProduction?
+  //   {
+  //       minimize: true,
+  //       minimizer: [
+  //         new TerserPlugin({
+  //           terserOptions: {
+  //             compress: {
+  //               drop_console: true,
+  //             },
+  //             output: {
+  //               comments: false,
+  //               beautify: false,
+  //             },
+  //           },
+  //           extractComments: false,
+  //         }),
+  //       ],
+  //     }
+  //   : {},
   performance: {
     hints: false,
     maxAssetSize: 512000,
@@ -73,7 +92,8 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            compact: isProduction ? true : false,
+            // compact: isProduction ? true : false,
+            compact: true,
           },
         },
         exclude: /node_modules/,
@@ -247,18 +267,17 @@ module.exports = {
       },
     }),
     new ImageminWebpWebpackPlugin(),
-    isProduction
-      ? new HtmlCriticalWebpackPlugin({
-          base: path.join(path.resolve(__dirname), "docs"),
-          src: "index.html",
-          dest: "index.html",
-          css: ["./src/styles/main.scss"],
-          inline: true,
-          minify: true,
-          extract: false,
-        })
-      : false,
-
+    // isProduction ?
+    new HtmlCriticalWebpackPlugin({
+      base: path.join(path.resolve(__dirname), "docs"),
+      src: "index.html",
+      dest: "index.html",
+      css: ["./src/styles/main.scss"],
+      inline: true,
+      minify: true,
+      extract: false,
+    }),
+    // : false
     new webpack.ProvidePlugin({
       $: "jquery",
       _: "lodash",
