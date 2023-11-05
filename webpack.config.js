@@ -11,12 +11,14 @@ const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const webpack = require("webpack");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-
+// if (process.env.NODE_ENV === 'production') {
+//   console.log('У виробничому середовищі');
+// } else {
+//   console.log('У розробницькому середовищі');
+// }
 module.exports = {
-  // mode: isProduction ? "production" : "development",
-  mode: "production",
-  // devtool: isProduction ? false : "inline-source-map",
-  devtool: false,
+  mode: isProduction ? "production" : "development",
+  devtool: isProduction ? false : "inline-source-map",
   entry: {
     filename: path.resolve(__dirname, "src/index.jsx"),
   },
@@ -33,42 +35,43 @@ module.exports = {
     // clean: true,
   },
 
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
-          },
-          output: {
-            comments: false,
-            beautify: false,
+  optimization: isProduction
+    ? {
+        minimize: true,
+        runtimeChunk: "single",
+        splitChunks: {
+          chunks: "all",
+          maxInitialRequests: Infinity,
+          minSize: 0,
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name(module) {
+                const packageName = module.context.match(
+                  /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+                )[1];
+                return `npm.${packageName.replace("@", "")}`;
+              },
+            },
           },
         },
-        extractComments: false,
-      }),
-    ],
-  },
-  // isProduction?
-  //   {
-  //       minimize: true,
-  //       minimizer: [
-  //         new TerserPlugin({
-  //           terserOptions: {
-  //             compress: {
-  //               drop_console: true,
-  //             },
-  //             output: {
-  //               comments: false,
-  //               beautify: false,
-  //             },
-  //           },
-  //           extractComments: false,
-  //         }),
-  //       ],
-  //     }
-  //   : {},
+        usedExports: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
+              output: {
+                comments: false,
+                beautify: false,
+              },
+            },
+            extractComments: false,
+          }),
+        ],
+      }
+    : {},
   performance: {
     hints: false,
     maxAssetSize: 512000,
@@ -92,8 +95,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            // compact: isProduction ? true : false,
-            compact: true,
+            compact: isProduction ? true : false,
           },
         },
         exclude: /node_modules/,
@@ -111,7 +113,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              sourceMap: isProduction ? true : false,
+              sourceMap: isProduction ? false : true,
             },
           },
           {
@@ -126,7 +128,7 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: isProduction ? true : false,
+              sourceMap: isProduction ? false : true,
             },
           },
         ],
@@ -267,17 +269,18 @@ module.exports = {
       },
     }),
     new ImageminWebpWebpackPlugin(),
-    // isProduction ?
-    new HtmlCriticalWebpackPlugin({
-      base: path.join(path.resolve(__dirname), "docs"),
-      src: "index.html",
-      dest: "index.html",
-      css: ["./src/styles/main.scss"],
-      inline: true,
-      minify: true,
-      extract: false,
-    }),
-    // : false
+    isProduction
+      ? new HtmlCriticalWebpackPlugin({
+          base: path.join(path.resolve(__dirname), "docs"),
+          src: "index.html",
+          dest: "index.html",
+          css: ["./src/styles/main.scss"],
+          inline: true,
+          minify: true,
+          extract: false,
+        })
+      : false,
+
     new webpack.ProvidePlugin({
       $: "jquery",
       _: "lodash",
@@ -313,6 +316,15 @@ module.exports = {
         appDescription: "nft application",
         developerURL: null,
         background: "rgba(0, 0, 0, 0)",
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          windows: true,
+          yandex: false,
+        },
       },
     }),
     // plugins.filter(Boolean),

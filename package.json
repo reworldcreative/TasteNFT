@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "dev": "webpack --node-env=development --config webpack.config.js",
+    "build": "webpack --node-env=production --config webpack.config.js",
     "server": "npx webpack serve --mode development"
   },
   "browserslist": [

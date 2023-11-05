@@ -24,16 +24,40 @@ export default function mainSlider() {
         cards-effect-slide-shadows="false"
       >
         <swiper-slide>
-          <PictureComponent src={nft1} alt="nft image" className="nft-image" />
+          <PictureComponent
+            src={nft1}
+            alt="nft image"
+            className="nft-image"
+            width="519"
+            height="519"
+          />
         </swiper-slide>
         <swiper-slide>
-          <PictureComponent src={nft2} alt="nft image" className="nft-image" />
+          <PictureComponent
+            src={nft2}
+            alt="nft image"
+            className="nft-image"
+            width="519"
+            height="519"
+          />
         </swiper-slide>
         <swiper-slide>
-          <PictureComponent src={nft3} alt="nft image" className="nft-image" />
+          <PictureComponent
+            src={nft3}
+            alt="nft image"
+            className="nft-image"
+            width="519"
+            height="519"
+          />
         </swiper-slide>
         <swiper-slide>
-          <PictureComponent src={nft4} alt="nft image" className="nft-image" />
+          <PictureComponent
+            src={nft4}
+            alt="nft image"
+            className="nft-image"
+            width="519"
+            height="519"
+          />
         </swiper-slide>
       </swiper-container>
     </div>
