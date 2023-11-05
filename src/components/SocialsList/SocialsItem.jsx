@@ -8,7 +8,7 @@ export default function SocialsItem({ link, image, caption }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src={image} alt="social image" />
+      <img src={image} alt="social image" width="20" height="20" />
       <p className="socialsItem__text">{caption}</p>
     </a>
   );

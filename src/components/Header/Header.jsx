@@ -33,8 +33,8 @@ export default function Header({ children }) {
           src={logo}
           alt="logo"
           className="logo"
-          width="47"
-          height="47"
+          width="39"
+          height="39"
         />
       </Link>
       <div className="search">
