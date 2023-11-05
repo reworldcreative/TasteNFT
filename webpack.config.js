@@ -56,6 +56,7 @@ module.exports = {
           },
         },
         usedExports: true,
+        moduleIds: "deterministic",
         minimizer: [
           new TerserPlugin({
             terserOptions: {
@@ -324,12 +325,6 @@ module.exports = {
           favicons: true,
           windows: true,
           yandex: false,
-        },
-        sizes: {
-          android: [36, 48, 72],
-          appleIcon: [57, 60, 72],
-          favicons: [16, 32, 96],
-          windows: [16, 32, 48, 62],
         },
       },
     }),
