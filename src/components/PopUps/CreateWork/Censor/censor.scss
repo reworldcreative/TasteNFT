@@ -20,4 +20,16 @@
     align-items: center;
     gap: 20px;
   }
+
+  &__icon {
+    &.active {
+      filter: invert(0%) sepia(37%) saturate(3000%) hue-rotate(240deg)
+        brightness(55%) contrast(290%) drop-shadow(2px 4px 6px black);
+    }
+
+    &:hover {
+      filter: drop-shadow(2px 4px 6px black);
+      transform: scale(1.1);
+    }
+  }
 }
