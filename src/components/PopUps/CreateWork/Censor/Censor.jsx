@@ -25,10 +25,7 @@ export default function Censor({ image }) {
       <h2 className="section-text_accent upload__title">
         Censor the public version of artwork, if it contains 18+ content
       </h2>
-      <CanvasComponent
-        addImage={image ? image : censorDefault}
-        filter={blur ? "blur" : clarity ? "clarity" : "none"}
-      />
+      <CanvasComponent addImage={image ? image : censorDefault} filter={blur ? "blur" : clarity ? "clarity" : "none"} />
       {/* <img
         className="censor__image"
         src={image ? image : censorDefault}
@@ -38,16 +35,10 @@ export default function Censor({ image }) {
         <li className="censor__icon">
           <img src={pictureIcon} alt="picture icon" />
         </li>
-        <li
-          className={`censor__icon ${blur ? "active" : ""}`}
-          onClick={choseBlur}
-        >
+        <li className={`censor__icon ${blur ? "active" : ""}`} onClick={choseBlur}>
           <img src={stickerIcon} alt="blur icon" />
         </li>
-        <li
-          className={`censor__icon ${clarity ? "active" : ""}`}
-          onClick={choseClarity}
-        >
+        <li className={`censor__icon ${clarity ? "active" : ""}`} onClick={choseClarity}>
           <img src={blurIcon} alt="color select icon" />
         </li>
       </ul>

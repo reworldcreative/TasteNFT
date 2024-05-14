@@ -13,8 +13,7 @@ export default function Upload({ isError, hideError, getFilePath }) {
       // console.log("File size:", fileSizeInMB, "MB");
 
       const fileNameSplit = file.name.split("."); // Розбиття імені файлу за крапкою
-      const fileExtension =
-        fileNameSplit[fileNameSplit.length - 1].toLowerCase(); // Останній елемент - це розширення
+      const fileExtension = fileNameSplit[fileNameSplit.length - 1].toLowerCase(); // Останній елемент - це розширення
       // console.log("File extension:", fileExtension);
 
       if (fileSizeInMB > 50 || !["jpg", "png", "gif"].includes(fileExtension)) {
@@ -48,29 +47,13 @@ export default function Upload({ isError, hideError, getFilePath }) {
   };
   return (
     <div className="upload">
-      <h2 className="section-text_accent upload__title">
-        Upload the artwork you will be selling
-      </h2>
-      <div
-        className="upload__container"
-        onClick={handleFileInput}
-        onDragOver={handleDragOver}
-        onDrop={handleDrop}
-      >
-        <input
-          type="file"
-          id="fileInput"
-          className="inputfile"
-          onChange={(e) => handleFileChange(e.target.files)}
-        />
+      <h2 className="section-text_accent upload__title">Upload the artwork you will be selling</h2>
+      <div className="upload__container" onClick={handleFileInput} onDragOver={handleDragOver} onDrop={handleDrop}>
+        <input type="file" id="fileInput" className="inputfile" onChange={(e) => handleFileChange(e.target.files)} />
         <div className="upload__text">
-          <p className="section-text_accent upload__property">
-            1500x500px. JPG, PNG or GIF. 100MB max size.
-          </p>
+          <p className="section-text_accent upload__property">1500x500px. JPG, PNG or GIF. 100MB max size.</p>
 
-          <p className="section-text_accent">
-            Drag and drop an image here, or click to browse
-          </p>
+          <p className="section-text_accent">Drag and drop an image here, or click to browse</p>
         </div>
       </div>
     </div>
